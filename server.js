@@ -3,7 +3,7 @@ const {animals} = require ('./data/animals.json');
 
 const express = require('express'); // call express.js package
 
-
+const PORT = process.env.PORT || 3001;
 
 //Setting up the server only takes two steps: we need to instantiate the server, then tell it to listen for requests. 
 const app = express(); // to initiate the server
@@ -61,8 +61,8 @@ if (req.query) {
 
 
 //To make our server listen.
-app.listen (3001, () => {
-    console.log (`API server now on port 3001!`);
+app.listen (PORT, () => {
+    console.log (`API server now on port ${PORT}!`);
 });
 
 
